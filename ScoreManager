@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;//シーン切り替えに使用するライブラリ
+using UnityEngine.UI;
+
+//スコア表示→シーン切り替え(スタートへ)
+
+public class ScoreManager : MonoBehaviour
+{
+
+    int resultHitpoint = ColPlayer.getHitPoint();
+    public GameObject score_object = null; // Textオブジェクト
+
+    // 初期化
+    void Start()
+    {
+        
+    }
+
+    // 更新
+    void Update()
+    {
+        // オブジェクトからTextコンポーネントを取得
+        Text score_text = score_object.GetComponent<Text>();
+        // テキストの表示を入れ替える
+        score_text.text = "SCORE:"+resultHitpoint;
+
+
+        if (Input.GetKeyDown("b"))
+        {
+            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        }
+    }
+}
