@@ -24,16 +24,20 @@ public class ColPlayer : MonoBehaviour
     {
         if (coll.gameObject.tag == "Food")
         {
+            GetComponent<AudioSource>().Play();
             score += 10;
             setScore(score);
+            
         }
         if (coll.gameObject.tag == "myouga")
         {
+            GetComponent<AudioSource>().Play();
             score += 20;
             setScore(score);
         }
         if (coll.gameObject.tag == "syouga")
         {
+            GetComponent<AudioSource>().Play();
             score += 30;
             setScore(score);
         }
