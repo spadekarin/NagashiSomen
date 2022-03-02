@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class myougagenerator : MonoBehaviour
 {
-    public GameObject rockPrefab;
+    public GameObject Prefab;
 
     void Start()
     {
@@ -13,7 +13,7 @@ public class myougagenerator : MonoBehaviour
 
     void Gen()
     {
-        Instantiate(rockPrefab, new Vector3(-2.5f + 5 * Random.value, 6, 0), Quaternion.identity);
+        Instantiate(Prefab, new Vector3(-2.5f + 5 * Random.value, 6, 0), Quaternion.identity);
     }
 
 }
