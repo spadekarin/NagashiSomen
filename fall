@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+//オブジェクトの落下に関する調整
+
 public class fall: MonoBehaviour
 {
 
