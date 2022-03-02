@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//プレイヤーの左右の動き
+
 public class playermove : MonoBehaviour
 {
     void Update()
