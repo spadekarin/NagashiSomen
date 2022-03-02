@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class syougagenerator : MonoBehaviour
+{
+    public GameObject Prefab;
+
+    void Start()
+    {
+        InvokeRepeating("Gen", 10, 5);
+    }
+
+    void Gen()
+    {
+        Instantiate(Prefab, new Vector3(-2.5f + 5 * Random.value, 6, 0), Quaternion.identity);
+    }
+
+}
