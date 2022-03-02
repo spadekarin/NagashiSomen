@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;//シーン切り替えに使用するライブラリ
+using UnityEngine.UI;
+//bキーでシーン切り替え(はじめに戻る)
+
+public class sceneback : MonoBehaviour
+{
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+       int resultHitpoint = ColPlayer.getHitPoint();
+    }
+
+   
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("b"))
+        {
+            SceneManager.LoadScene("Start", LoadSceneMode.Single);
+        }
+    }
+}
